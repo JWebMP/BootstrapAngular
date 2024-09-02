@@ -112,9 +112,9 @@ public abstract class BSAlerts<J extends BSAlerts<J>>
     }
 
     @Override
-    public List<String> componentMethods()
+    public List<String> methods()
     {
-        List<String> out = INgComponent.super.componentMethods();
+        List<String> out = INgComponent.super.methods();
         if (alertDataService != null)
         {
             out.add("close(alertItem: Alert) {\n" +
@@ -162,7 +162,7 @@ public abstract class BSAlerts<J extends BSAlerts<J>>
     }
 
     @Override
-    public void init()
+    protected void init()
     {
         if (!isInitialized())
         {
