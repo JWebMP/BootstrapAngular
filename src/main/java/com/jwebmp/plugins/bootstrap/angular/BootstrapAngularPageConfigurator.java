@@ -9,8 +9,8 @@ import com.jwebmp.core.base.angular.client.annotations.typescript.TsDependency;
 import com.jwebmp.core.services.IPage;
 import com.jwebmp.core.services.IPageConfigurator;
 
-@NgBootModuleImport("NgbModule")
-@NgBootImportReference(value = "NgbModule", reference = "@ng-bootstrap/ng-bootstrap")
+@NgModuleImport("NgbModule")
+@NgImportReference(value = "NgbModule", reference = "@ng-bootstrap/ng-bootstrap")
 
 @TsDependency(value = "@ng-bootstrap/ng-bootstrap", version = "^16.0.0")
 @TsDependency(value = "@popperjs/core", version = "^2.1..8")
