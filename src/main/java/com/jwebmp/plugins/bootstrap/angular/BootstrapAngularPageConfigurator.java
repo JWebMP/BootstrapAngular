@@ -26,17 +26,14 @@ import com.jwebmp.core.services.IPageConfigurator;
 @NgStyleSheet(value = "node_modules/bootstrap/scss/bootstrap.scss", name = "bootstrap")
 @NgScript(value = "@popperjs/core/dist/umd/popper.js", sortOrder = 4)
 @NgScript(value = "bootstrap/dist/js/bootstrap.js", sortOrder = 5)
-public class BootstrapAngularPageConfigurator implements IPageConfigurator<BootstrapAngularPageConfigurator>
-{
+public class BootstrapAngularPageConfigurator implements IPageConfigurator<BootstrapAngularPageConfigurator> {
     @Override
-    public IPage<?> configure(IPage<?> page)
-    {
+    public IPage<?> configure(IPage<?> page) {
         return page;
     }
 
     @Override
-    public boolean enabled()
-    {
+    public boolean enabled() {
         return true;
     }
 }
