@@ -15,7 +15,7 @@ import com.jwebmp.core.services.IPageConfigurator;
 @TsDependency(value = "@ng-bootstrap/ng-bootstrap", version = "^16.0.0")
 @TsDependency(value = "@popperjs/core", version = "^2.1..8")
 @TsDependency(value = "bootstrap", version = "^5.3.2")
-@TsDependency(value = "@angular/localize", version = "^18.0.1")
+@TsDependency(value = "@angular/localize", version = "^19.0.1")
 
 /*@TsDependency(value = "ng-bootstrap-datetime-angular-13", version = "^0.1.33")
 @NgBootImportReference(name = "NgBootstrapDatetimeAngularModule ", reference = "ng-bootstrap-datetime-angular-13")
@@ -26,14 +26,17 @@ import com.jwebmp.core.services.IPageConfigurator;
 @NgStyleSheet(value = "node_modules/bootstrap/scss/bootstrap.scss", name = "bootstrap")
 @NgScript(value = "@popperjs/core/dist/umd/popper.js", sortOrder = 4)
 @NgScript(value = "bootstrap/dist/js/bootstrap.js", sortOrder = 5)
-public class BootstrapAngularPageConfigurator implements IPageConfigurator<BootstrapAngularPageConfigurator> {
+public class BootstrapAngularPageConfigurator implements IPageConfigurator<BootstrapAngularPageConfigurator>
+{
     @Override
-    public IPage<?> configure(IPage<?> page) {
+    public IPage<?> configure(IPage<?> page)
+    {
         return page;
     }
 
     @Override
-    public boolean enabled() {
+    public boolean enabled()
+    {
         return true;
     }
 }

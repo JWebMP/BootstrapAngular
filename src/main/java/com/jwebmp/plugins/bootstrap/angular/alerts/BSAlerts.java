@@ -50,9 +50,9 @@ import static com.jwebmp.core.base.angular.client.services.interfaces.Annotation
  */
 @NgComponent("alert-closable")
 @ComponentInformation(name = "Bootstrap Alert",
-                      description = "Provide contextual feedback messages for typical user actions with the handful of available and flexible alert " + "messages.",
-                      url = "https://v4-alpha.getbootstrap.com/components/alerts/",
-                      wikiUrl = "https://github.com/GedMarc/JWebMP-BootstrapPlugin/wiki")
+        description = "Provide contextual feedback messages for typical user actions with the handful of available and flexible alert " + "messages.",
+        url = "https://v4-alpha.getbootstrap.com/components/alerts/",
+        wikiUrl = "https://github.com/GedMarc/JWebMP-BootstrapPlugin/wiki")
 @NgDataTypeReference(NgAlert.class)
 
 @NgField("data?: any;")
@@ -87,7 +87,7 @@ public abstract class BSAlerts<J extends BSAlerts<J>>
         }
         String name = getTsFilename(alertDataService.getClass());
         name = name.substring(0, 1)
-                   .toLowerCase() + name.substring(1);
+                .toLowerCase() + name.substring(1);
         return name;
     }
 
@@ -105,9 +105,9 @@ public abstract class BSAlerts<J extends BSAlerts<J>>
     {
         List<String> out = INgComponent.super.afterViewInit();
         out.add("        this." + getServiceName() + ".data.subscribe((dd) => {\n" +
-                        "            this.data = dd;\n" +
-                        "            this.updated = true;\n" +
-                        "        });\n");
+                "            this.data = dd;\n" +
+                "            this.updated = true;\n" +
+                "        });\n");
         return out;
     }
 
@@ -117,9 +117,9 @@ public abstract class BSAlerts<J extends BSAlerts<J>>
         List<String> out = INgComponent.super.methods();
         if (alertDataService != null)
         {
-            out.add("close(alertItem: Alert) {\n" +
+           /* out.add("close(alertItem: Alert) {\n" +
                             "    this.data.out?.splice(this.data.out?.indexOf(alertItem), 1);\n" +
-                            "}\n");
+                            "}\n");*/
         }
         else
         {
@@ -170,8 +170,8 @@ public abstract class BSAlerts<J extends BSAlerts<J>>
             addAttribute("*ngFor", "let alert of data?.out");
 
             add(new BSAlertsAlert().setType(BSColourTypes.AlertsType)
-                                   .bind("alert.message")
-                                   .addAttribute("(closed)", "close(alert)"));
+                    .bind("alert.message")
+                    .addAttribute("(closed)", "close(alert)"));
         }
     }
 
